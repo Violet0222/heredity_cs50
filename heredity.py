@@ -149,7 +149,8 @@ def joint_probability(people, one_gene, two_genes, have_trait):
             genes = 2
         elif person in one_gene:
             genes = 1
-        else: genes = 0
+        else: 
+            genes = 0
             
         has_trait = person in have_trait
         
@@ -177,6 +178,7 @@ def joint_probability(people, one_gene, two_genes, have_trait):
         trait_prob = PROBS["trait"][genes][has_trait]
         probability *= gene_prob * trait_prob
     return probability
+
 
 def update(probabilities, one_gene, two_genes, have_trait, p):
     """
